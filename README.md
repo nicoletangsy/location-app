@@ -1,6 +1,8 @@
 # location-app
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a simple map web application created using vue 2.
+
+[CodeSandbox](https://codesandbox.io/p/github/nicoletangsy/location-app/main?layout=%257B%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522rootPanelGroup%2522%253A%257B%2522direction%2522%253A%2522horizontal%2522%252C%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522id%2522%253A%2522ROOT_LAYOUT%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522EDITOR%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522panelType%2522%253A%2522TABS%2522%252C%2522id%2522%253A%2522clhy6ffj7000a3n6p3bdkfm2m%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522DEVTOOLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522panelType%2522%253A%2522TABS%2522%252C%2522id%2522%253A%2522clhy6ffj7000c3n6prf6ctiuk%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%252C%2522sizes%2522%253A%255B50%252C50%255D%257D%252C%2522tabbedPanels%2522%253A%257B%2522clhy6ffj7000a3n6p3bdkfm2m%2522%253A%257B%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clhy6ffj600093n6pwohq2ykn%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522filepath%2522%253A%2522%252FREADME.md%2522%257D%255D%252C%2522id%2522%253A%2522clhy6ffj7000a3n6p3bdkfm2m%2522%252C%2522activeTabId%2522%253A%2522clhy6ffj600093n6pwohq2ykn%2522%257D%252C%2522clhy6ffj7000c3n6prf6ctiuk%2522%253A%257B%2522id%2522%253A%2522clhy6ffj7000c3n6prf6ctiuk%2522%252C%2522tabs%2522%253A%255B%257B%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522id%2522%253A%2522clhy6gae6007v3n6p7lskkth0%2522%252C%2522mode%2522%253A%2522permanent%2522%257D%252C%257B%2522type%2522%253A%2522TASK_PORT%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A5173%252C%2522id%2522%253A%2522clhy6gcxe00co3n6psr1urjvi%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522path%2522%253A%2522%252F%2522%252C%2522actionBarPosition%2522%253A%2522docked%2522%257D%255D%252C%2522activeTabId%2522%253A%2522clhy6gcxe00co3n6psr1urjvi%2522%257D%257D%252C%2522showDevtools%2522%253Atrue%252C%2522showSidebar%2522%253Atrue%252C%2522sidebarPanelSize%2522%253A15%257D)
 
 ## Recommended IDE Setup
 
@@ -25,24 +27,32 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+# Or if you are using yarn
+yarn
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
+# Or if you are using yarn
+yarn dev
 ```
 
 ### Type-Check, Compile and Minify for Production
 
 ```sh
 npm run build
+# Or if you are using yarn
+yarn build
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
 npm run test:unit
+# Or if you are using yarn
+yarn test:unit
 ```
 
 ### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
@@ -50,10 +60,15 @@ npm run test:unit
 ```sh
 npm run build
 npm run test:e2e # or `npm run test:e2e:ci` for headless testing
+# Or if you are using yarn
+yarn build
+yarn test:e2e # or `yarn test:e2e:ci` for headless testing
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
+# Or if you are using yarn
+yarn lint
 ```
