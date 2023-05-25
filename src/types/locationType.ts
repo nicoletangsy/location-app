@@ -4,4 +4,7 @@ export interface LocationType {
   coordinates: [number, number];
   offset: number;
   timezone: string;
+  searchDatetime: string;
+  localDatetime?: string;
+  selected: boolean;
 }

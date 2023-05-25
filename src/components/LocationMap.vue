@@ -1,22 +1,12 @@
 <script setup lang="ts">
 import styled from "vue-styled-components";
-import { ref, type PropType } from "vue";
+import { ref } from "vue";
 import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
 import "leaflet/dist/leaflet.css";
-import IconCurrLoc from "./icons/IconCurrLoc.vue";
-import type { LocationType } from "@/types/locationType";
+import { VIcon } from "vuetify/lib";
+import { useStore } from "@/store";
 
-const props = defineProps({
-  center: {
-    type: Array as unknown as PropType<[number, number]>,
-    required: true,
-  },
-  searched: {
-    type: Array as PropType<LocationType[]>,
-    required: true,
-  },
-});
-
+const state = useStore();
 const zoom = ref<number>(16);
 const mapOptions = ref<object>({ zoomSnap: 0.5 });
 const url = ref<string>("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
@@ -25,31 +15,36 @@ const attribution = ref<string>(
 );
 
 const MapContainer = styled.div`
-  overflow: hidden;
   width: 50%;
 `;
 </script>
 
 <template>
   <map-container>
-    <!-- <v-icon size="large" color="red-darken-2" icon="mdi-map-marker " /> -->
     <l-map
       :zoom="zoom"
-      :center="props.center"
+      :center="state.searched[state.searched.length - 1].coordinates"
       :options="mapOptions"
       style="height: 100%"
     >
       <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
       <l-marker
-        v-for="location in searched"
-        :key="location.id"
-        :lat-lng="location.coordinates"
-      ></l-marker>
-      <l-marker :lat-lng="props.center">
+        :lat-lng="state.searched[state.searched.length - 1].coordinates"
+      >
         <l-icon>
-          <icon-curr-loc />
+          <v-icon large color="#d32f2f">mdi-map-marker</v-icon>
         </l-icon>
       </l-marker>
+      <div v-for="location in state.searched" :key="location.id">
+        <l-marker
+          v-if="location.id !== state.searched[state.searched.length - 1].id"
+          :lat-lng="location.coordinates"
+        >
+          <l-icon>
+            <v-icon large color="#757575">mdi-map-marker</v-icon>
+          </l-icon>
+        </l-marker>
+      </div>
     </l-map>
   </map-container>
 </template>
