@@ -86,7 +86,7 @@ const SField = styled.div`
       <v-btn @click="searchLocation" color="info" small rounded>Search</v-btn>
     </s-search>
     <div>
-      Time of Current Location:
+      Time of Searched Location:
       {{
         state.searched[state.searched.length - 1].localDatetime
           ? state.searched[state.searched.length - 1].localDatetime +
